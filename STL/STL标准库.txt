@@ -1,0 +1,105 @@
+vector是C++标准库中的一个容器类，提供了动态数组的功能。下面是一些常用的vector库函数：
+
+构造函数：
+vector<T> v：创建一个空的vector对象，其中T表示存储的元素类型。
+vector<T> v(n)：创建一个包含n个默认初始化元素的vector对象。
+vector<T> v(n, value)：创建一个包含n个值为value的元素的vector对象。
+成员函数：
+v.size()：返回vector中元素的个数。
+v.empty()：判断vector是否为空，返回一个布尔值。
+v.clear()：清空vector中的所有元素。
+v.push_back(value)：在vector的末尾添加一个值为value的元素。
+v.pop_back()：删除vector末尾的元素。
+v.front()：返回vector中第一个元素的引用。
+v.back()：返回vector中最后一个元素的引用。
+v.at(index)：返回指定索引位置的元素的引用，同时会进行边界检查。
+v[index]：返回指定索引位置的元素的引用，不进行边界检查。
+v.begin()：返回指向vector第一个元素的迭代器。
+v.end()：返回指向vector最后一个元素之后位置的迭代器。
+迭代器：
+vector<T>::iterator it：定义一个迭代器，用于遍历vector中的元素。
+it = v.begin()：将迭代器it指向vector的第一个元素。
+it = v.end()：将迭代器it指向vector最后一个元素之后的位置。
+*it：返回迭代器指向的元素的引用。
+it++：迭代器自增，指向下一个元素。
+it--：迭代器自减，指向上一个元素。
+这些是vector库函数的一些常见用法，可以根据具体需求选择适合的函数来操作vector容器中的元素。
+
+
+
+
+algorithm是C++标准库中的一个头文件，其中包含了许多常用的算法函数，这些函数可以用于对容器、数组等数据结构进行排序、查找、合并等操作。下面是algorithm头文件中常用的函数：
+
+sort：对容器或数组进行排序，可以指定排序的方式（升序或降序）和排序的范围。
+
+binary_search：在有序容器或数组中查找指定元素，返回布尔值表示是否找到。
+
+lower_bound：在有序容器或数组中查找第一个大于等于指定元素的位置，返回迭代器或指针。
+
+upper_bound：在有序容器或数组中查找第一个大于指定元素的位置，返回迭代器或指针。
+
+merge：将两个有序容器或数组合并成一个有序序列。
+
+reverse：将容器或数组中的元素反转。
+
+rotate：将容器或数组中的元素循环移动指定的位置。
+
+unique：去除容器或数组中的重复元素，返回去重后的末尾迭代器或指针。
+
+max_element：返回容器或数组中的最大元素的迭代器或指针。
+
+min_element：返回容器或数组中的最小元素的迭代器或指针。
+
+count：统计容器或数组中指定元素的个数。
+
+accumulate：对容器或数组中的元素进行累加或累乘。
+
+next_permutation：生成容器或数组中下一个排列，返回布尔值表示是否成功。
+
+prev_permutation：生成容器或数组中上一个排列，返回布尔值表示是否成功。
+
+nth_element：对容器或数组进行部分排序，使第n个元素处于正确的位置。
+
+以上是algorithm头文件中常用的函数，还有其他一些函数，如find、replace、for_each等，可以根据需要选择使用。这些函数大大简化了对数据结构的操作，提高了程序的效率和可读性。
+
+
+
+
+使用Set库，您可以执行以下常见操作：
+
+插入元素：通过insert()函数向Set中插入一个元素。
+#include <set>
+std::set<int> mySet;
+mySet.insert(10); // 在Set中插入元素10
+mySet.insert(20); // 在Set中插入元素20
+
+
+删除元素：通过erase()函数从Set中删除一个元素。
+mySet.erase(10); // 从Set中删除元素10
+
+
+查找元素：通过find()函数查找Set中的一个元素。
+std::set<int>::iterator it = mySet.find(20);
+if (it != mySet.end()) {
+    // 元素20存在于Set中
+} else {
+    // 元素20不存在于Set中
+}
+
+
+获取Set中元素的个数：通过使用size()函数获取Set中元素的个数。
+int count = mySet.size(); // 获取Set中元素的个数
+
+
+遍历Set：通过使用迭代器（iterator）遍历Set中的元素。
+for (std::set<int>::iterator it = mySet.begin(); it != mySet.end(); ++it) {
+    int element = *it;
+    // 对每个元素执行操作
+}
+
+
+清空Set：通过使用clear()函数清空Set中的所有元素。
+mySet.clear(); // 清空Set中的所有元素
+
+
+Set的优点是能够快速地插入、删除和查找元素，并且能够自动处理元素的排序和去重。它可以在许多应用中使用，如去重、查找唯一元素等。
